@@ -68,6 +68,7 @@ gem "refile-mini_magick"
 
 gem "bootstrap","~>4.5"
 gem "jquery-rails"
+gem "font-awesome-sass","~>5.13"
 
 group :test do
   gem 'capybara', '>= 2.15'

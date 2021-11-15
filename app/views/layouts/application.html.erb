@@ -11,8 +11,8 @@
 
   <body>
     <header> <!--幅やサイズ未設定-->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container h5">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+        <div class="container">
           <a class="navbar-brand" href="/">
             <span>Bookers</span>
           </a>
@@ -35,11 +35,11 @@
               <%= link_to "Log out",destroy_user_session_path, method: :delete %>
             </li>
             <% else %>
-            <li class="fas fa-link nav-link text-light">
+            <li class="fas fa-home nav-link text-light">
               <%= link_to "Home",root_path %>
             </li>
             <li class="fas fa-link nav-link text-light">
-              <%= link_to "About","home/about" %> <!--リンク先-->
+              <%= link_to "About","/about" %> <!--リンク先-->
             </li>
             <li class="fas fa-user-plus nav-link text-light">
               <%= link_to "Sign up",new_user_registration_path %>
@@ -53,6 +53,19 @@
       </nav>
     </header>
     
+    <main class="mb-auto">
     <%= yield %>
+    </main>
+    
+    <footer>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="mx-auto">
+            <p>CopyRight Infratop.inc</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+   
   </body>
 </html>
